@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <main>
+        <h1>TIC TAC TOE</h1>
+        <div class="contain">
+            <div class = "game">
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button>
+                <button class = "box"></button> 
+            </div>
+        </div>
+        <button class="reset">Reset Game</button>
+    </main>
+
+    <div id="overlay">
+        <div id="winpopup">
+            <span id="wintext"></span>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: 'Segoe UI';
+        }
+
+        h1{
+            color: whitesmoke;
+            font-size: 50px;
+        }
+
+        body{
+            background-image: url("images/image.png");
+            background-size: cover;
+            height: 200px;
+            text-align: center;
+        }
+
+        .box{
+            height: 18vmin;
+            width: 18vmin;
+            border-radius: 10px;
+            box-shadow: inset;
+            font-size: 8vmin;
+        }
+
+        .contain{
+            height:70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game{
+            height:60vmin;
+            width:60vmin;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap:1.5vmin;
+        }
+
+        .reset{
+            height:50px;
+            box-shadow: inset;
+            border-radius: 10px;
+        }
+
+        #overlay{
+            display:none;
+            flex-direction: column;
+            color:white;
+            font-size: 70px;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw; height: 100vh;
+        }
+
+        #winpopup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #wintext {
+            color: #fff;
+            font-size: 8vw;
+            font-weight: bold;
+            margin-bottom: 2vw;
+            text-shadow: 0 4px 32px #000, 0 2px 8px #444;
+            letter-spacing: 0.1em;
+        }
+
+        #play-again{
+            height:50px;
+            box-shadow: inset;
+            border-radius: 10px; 
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
